@@ -1,0 +1,36 @@
+
+        /* Slide-in animation for the form */
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Fade-in animation for input fields */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+         /* Apply animations */
+        .form-container {
+            animation: slideIn 1s ease-out;
+        }
+
+        .fade-input {
+            animation: fadeIn 1s ease-out;
+            animation-delay: 0.5s;
+            animation-fill-mode: both;
+        }
+

@@ -1,3 +1,83 @@
 
 <app-home></app-home>
 <p>resigter works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+
+
+    <style>
+
+
+
+    </style>
+</head>
+<body style="background-color: #f8f9fa; padding: 20px; border: 1px solid blue;">
+
+    <div class="container mt-5 ; border :3px solid yello" >
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="form-container p-4" style="background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1);">
+                    <h2 class="text-center mb-4" style="color: #007bff;">User Registration</h2>
+                    <form [formGroup]="user" (ngSubmit)="regidteUser()">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3 fade-input">
+                                    <label class="form-label" style="font-weight: bold;">Username:</label>
+                                    <input type="text" class="form-control" placeholder="Enter username" formControlName="username">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3 fade-input">
+                                    <label class="form-label" style="font-weight: bold;">Password:</label>
+                                    <input type="password" class="form-control" placeholder="Enter password" formControlName="password">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3 fade-input">
+                                    <label class="form-label" style="font-weight: bold;">First Name:</label>
+                                    <input type="text" class="form-control" placeholder="Enter first name" formControlName="firstName">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3 fade-input">
+                                    <label class="form-label" style="font-weight: bold;">Last Name:</label>
+                                    <input type="text" class="form-control" placeholder="Enter last name" formControlName="lastName">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3 fade-input">
+                                    <label class="form-label" style="font-weight: bold;">Email:</label>
+                                    <input type="email" class="form-control" placeholder="Enter email" formControlName="email">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3 fade-input">
+                                    <label class="form-label" style="font-weight: bold;">Role:</label>
+                                    <select class="form-select">
+                                        <option value="USER">User</option>
+                                        <option value="ADMIN">Admin</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 fade-input">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
